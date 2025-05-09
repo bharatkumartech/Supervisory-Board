@@ -1,0 +1,13 @@
+ {
+    "name": "2024",
+    "series": [
+      {
+        "name": "Rating",
+        "value": 50
+      },
+      {
+        "name": "remaining Rating",
+        "value": 10
+      }
+    ]
+  }

@@ -1,0 +1,37 @@
+{
+    "section": "03 - Essentials: Quantitative Analysis",
+    "title": "Quantitative Benchmarks",
+    "subtitle": "Per Topic (1/5)",
+    "columns": [
+        "Rating",
+        "Consensus",
+        "\u0394"
+    ],
+    "data": [
+        {
+            "selfConception1":"01 Self-Conception of the Supervisory Board",
+            "rating": 3.8,
+            "TUI":"TUI",
+            "benchmark":"Benchmark"
+        },
+        {
+            "selfConception1":"02 Discussion and Working Culture",
+            "rating": 3.8,
+            "TUI":"TUI",
+            "benchmark":"Benchmark"
+        },
+        {
+            "selfConception1":"03 Meetings of the Supervisory Board",
+            "rating": 3.8,
+            "TUI":"TUI",
+            "benchmark":"Benchmark"
+        },
+        {
+            "selfConception1":"04 Committees",
+            "rating": 3.8,
+            "TUI":"TUI",
+            "benchmark":"Benchmark"
+        }
+      
+    ]
+}

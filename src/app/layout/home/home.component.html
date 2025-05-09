@@ -1,0 +1,223 @@
+<app-header></app-header>
+<!-- page-1 -->
+<div class="full-container">
+    <div id="page-1" *ngIf="showPage1">
+        <div class="content">
+            <h5 class="intro">{{ boardData.section }}</h5>
+            <h1 class="title">{{ boardData.title }}</h1>
+            <h2 style="font-size: 15px;" class="subtitle">{{ boardData.subtitle }}</h2>
+        </div>
+        <div class="main-content">
+            <div class="sub-content1">
+                <p>
+                    {{ boardData.introPart1 }}
+                    <strong>{{ boardData.introBold }}</strong>
+                </p>
+                <div>
+                    <p *ngFor="let item of boardData.dimensions">- {{ item }}</p>
+                </div>
+                <p>{{ boardData.note }}</p>
+                <div class="footer">
+                    <p>{{ boardData.footnote }}</p>
+                </div>
+                <div style="font-size: 10px;">
+                    <p>{{ boardData.source }}</p>
+                </div>
+            </div>
+            <div class="sub-content2">
+                <div>
+                    <h4 class="average-heading">{{ boardData.averageRating.heading }}</h4>
+                    <p>{{ boardData.averageRating.description }}</p>
+                    <div style="margin-top: 50px; margin-bottom: 30px;">
+                        <ngx-charts-bar-horizontal-normalized [view]="[400,100]" [scheme]="colorScheme"
+                            [results]="multi" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis">
+                        </ngx-charts-bar-horizontal-normalized>
+                        <!-- Vertical Line Indicator -->
+                        <!-- <div class="average-line" [ngStyle]="getIndicatorStyle(4.2)">
+                    <div class="line"></div>
+                </div> -->
+                        <!-- Sentiment Labels -->
+                        <div class="sentiment-labels">
+                            <span>Disagree</span>
+                            <span>Neutral</span>
+                            <span>Agree</span>
+                        </div>
+                    </div>
+                    <div class="average-rating-heading">
+                        <p>- {{ boardData.averageRating.analysis }} {{averageRating}}%.</p>
+                        <p>
+                            - <span class="analysis1">{{boardData.averageRating.analysis1}}</span><span
+                                class="analysis2">{{boardData.averageRating.analysis2}} {{averageRating}}%.</span> <span
+                                class="analysis3">{{boardData.averageRating.analysis3}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-content3">
+
+                <h4 class="average-heading">{{ boardData.averageConsensus.heading }}</h4>
+                <p>{{ boardData.averageConsensus.description }}</p>
+                <div style="margin-top: 50px;margin-bottom: 30px; display: flex;justify-content: center;">
+                    <ngx-charts-pie-chart [view]="[200, 200]" [scheme]="colorScheme1" [results]="pieChartData"
+                        [doughnut]="true" [labels]="false" [legend]="false" [animations]="true"
+                        [tooltipDisabled]="false">
+                    </ngx-charts-pie-chart>
+
+
+                </div>
+                <div class="average-rating-heading">
+                    <p>- {{ boardData.averageConsensus.analysis }} {{averageConsensus}}%.</p>
+                    <p>
+                        - <span class="analysis1">{{boardData.averageConsensus.analysis1}}</span><span
+                            class="analysis2">{{boardData.averageConsensus.analysis2}}
+                            {{averageConsensus}}%.</span><span
+                            class="analysis3">{{boardData.averageConsensus.analysis3}}</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- page-2 -->
+    <div id="page-2" *ngIf="showPage2">
+        <div class="content">
+            <h5 class="intro">{{ boardData3.section }}</h5>
+            <h1 class="title">{{ boardData3.title }}</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr style="text-align: center;">
+                    <th></th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Consensus</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of boardData3.data; let i = index" style="vertical-align: middle;">
+                    <td style="background-color:#e0e0e0;">{{ item.selfConception1}}</td>
+                    <td>
+                        <ngx-charts-bar-horizontal-normalized [view]="[400,100]" [scheme]="benchMarkColorScheme"
+                            [results]="item.chartData" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis">
+                        </ngx-charts-bar-horizontal-normalized>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div>
+                                <span>&Oslash; TUI</span>
+                            </div>
+                            <div>
+                                <ngx-charts-pie-chart [view]="[100,200]" [scheme]="colorScheme1"
+                                    [results]="item.pieChartData" [doughnut]="true" [labels]="false" [legend]="false"
+                                    [animations]="true" [tooltipDisabled]="false">
+                                </ngx-charts-pie-chart>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+
+                            <div>
+                                <ngx-charts-pie-chart [view]="[100, 200]" [scheme]="colorScheme2"
+                                    [results]="item.consensusChartData" [doughnut]="true" [labels]="false"
+                                    [legend]="false" [animations]="true" [tooltipDisabled]="false">
+                                </ngx-charts-pie-chart>
+                            </div>
+                            <div>
+                                <span>Benchmark &Oslash;</span>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- page-3 -->
+    <div id="page-3" *ngIf="showPage3">
+        <div class="content">
+            <h5 class="intro">{{ boardData2.section }}</h5>
+            <h1 class="title">{{ boardData2.title }}</h1>
+            <h2 style="font-size: 15px;" class="subtitle">{{ boardData2.subtitle }}</h2>
+        </div>
+        <table class="table">
+            <thead>
+                <tr style="text-align: center;">
+                    <th scope="col">Question in 2020</th>
+                    <th scope="col">Rating 2020</th>
+                    <th scope="col">Question in 2024</th>
+                    <th scope="col">Rating 2024</th>
+                    <th scope="col">Δ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of boardData2.data; let i = index" style="vertical-align: middle;">
+                    <td>{{ item.question_2020 }}</td>
+                    <td>
+                        <ngx-charts-bar-horizontal-normalized [view]="[400,100]" [scheme]="colorScheme"
+                            [results]="item.chartData" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis">
+                        </ngx-charts-bar-horizontal-normalized>
+                    </td>
+                    <td>{{ item.question_2024 }}</td>
+                    <td>
+                        <ngx-charts-bar-horizontal-normalized [view]="[400,100]" [scheme]="colorScheme2"
+                            [results]="item.chartData2024" [gradient]="gradient" [xAxis]="showXAxis"
+                            [yAxis]="showYAxis">
+                        </ngx-charts-bar-horizontal-normalized>
+                    </td>
+                    <td>{{ item.delta }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- page-4 -->
+    <div id="page-4" *ngIf="showPage4">
+        <div class="content">
+            <h5 class="intro">{{ boardData1.section }}</h5>
+            <h1 class="title">{{ boardData1.title }}</h1>
+        </div>
+        <div class="main-content">
+            <div class="sub-content2">
+                <div>
+                    <h4 class="average-heading">{{ boardData1.commentByMembers }}</h4>
+                    <p class="heading-bold">{{ boardData1.NumberAndDurationOfMeetings }}</p>
+                </div>
+                <div>
+                    <p *ngFor="let item of boardData1.commentsByMembers.NumberAndDurationOfMeetings">- {{ item }}</p>
+                </div>
+                <div>
+                    <p class="heading-bold">{{ boardData1.meetingFormatsAndSupportFromBoardOffice }}</p>
+                    <p *ngFor="let item of boardData1.commentsByMembers.MeetingFormatsAndSupportFromBoardOffice">- {{
+                        item
+                        }}
+                    </p>
+                </div>
+                <div>
+                    <p class="heading-bold">{{ boardData1.distributionOfAgendaItems }}</p>
+                    <p *ngFor="let item of boardData1.commentsByMembers.DistributionOfAgendaItems">- {{ item }}</p>
+                </div>
+
+                <div>
+                    <p class="heading-bold">{{ boardData1.divisionBetweenPresentationsAndDiscussions }}</p>
+                    <p *ngFor="let item of boardData1.commentsByMembers.DivisionBetweenPresentationsAndDiscussions">- {{
+                        item }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;justify-content: center; height:200px">
+        <button class="nav-button left" (click)="scrollTo('page-1')">1</button>
+        <button class="nav-button right" (click)="scrollTo('page-2')">2</button>
+        <button class="nav-button middle" (click)="scrollTo('page-3')">3</button>
+        <button class="nav-button right" (click)="scrollTo('page-4')">4</button>
+
+    </div>
+</div>
+
+<app-footer></app-footer>

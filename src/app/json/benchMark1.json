@@ -1,0 +1,28 @@
+ [
+ {
+    "name": "Ø TUI",
+    "series": [
+      {
+        "name": "Rating",
+        "value": 40
+      },
+      {
+        "name": "remaining Rating",
+        "value": 20
+      }
+    ]
+  },
+   {
+    "name": "Ø Benchmark",
+    "series": [
+      {
+        "name": "Rating",
+        "value": 10
+      },
+      {
+        "name": "remaining Rating",
+        "value": 2
+      }
+    ]
+  }
+]

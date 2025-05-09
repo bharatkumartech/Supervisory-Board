@@ -1,0 +1,68 @@
+{
+    "section": "03 - Essentials: Quantitative Analysis",
+    "title": "Quantitative Benchmarks",
+    "subtitle": "Supervisory Board development in a multi-year comparison (1/2)",
+    "columns": [
+        "Question in 2020",
+        "Rating 2020",
+        "Question in 2024",
+        "Rating 2024",
+        "\u0394"
+    ],
+    "data": [
+        {
+            "question_2020": "The duration of the meetings is appropriate.",
+            "rating_2020": 3.8,
+            "question_2024": "The number and duration of the Supervisory Board meetings are appropriate with regard to the current situation of the company.",
+            "rating_2024": 4.3,
+            "delta": "+0.5",
+            "bar_2020_length": "medium",
+            "bar_2024_length": "long"
+        },
+        {
+            "question_2020": "The scope of the Executive Board's presentations at the meetings of the Supervisory Board is appropriate. The level of detail of the presentations is sufficient and the presentations are comprehensible.",
+            "rating_2020": 3.9,
+            "question_2024": "The allocation of time between (Executive Board) presentations on the one hand and time for questions and open discussion on the other hand is appropriate.",
+            "rating_2024": 4.3,
+            "delta": "+0.4",
+            "bar_2020_length": "medium",
+            "bar_2024_length": "long"
+        },
+        {
+            "question_2020": "The documents distributed in advance enable appropriate preparation for the agenda items and the adoption of resolutions.",
+            "rating_2020": 3.8,
+            "question_2024": "The meeting documents are complete, meaningful and appropriate in scope.",
+            "rating_2024": 4.2,
+            "delta": "+0.4",
+            "bar_2020_length": "medium",
+            "bar_2024_length": "long"
+        },
+        {
+            "question_2020": "The documents distributed in advance enable appropriate preparation for the agenda items and the adoption of resolutions.",
+            "rating_2020": 2.9,
+            "question_2024": "Documents for the Supervisory Board and committee meetings are distributed in advance with sufficient time for individual preparation.",
+            "rating_2024": 3.2,
+            "delta": "+0.3",
+            "bar_2020_length": "short",
+            "bar_2024_length": "medium"
+        },
+        {
+            "question_2020": "The atmosphere in the meetings of the Supervisory Board allows for open communication.",
+            "rating_2020": 4.0,
+            "question_2024": "The Supervisory Board provides an atmosphere of open, constructive and confidential discussion.",
+            "rating_2024": 4.2,
+            "delta": "+0.2",
+            "bar_2020_length": "long",
+            "bar_2024_length": "long"
+        },
+        {
+            "question_2020": "The Supervisory Board has the information required to make a decision on corporate strategy.",
+            "rating_2020": 4.0,
+            "question_2024": "In my opinion, the Supervisory Board is involved in all major business developments and significant deals and transactions.",
+            "rating_2024": 4.2,
+            "delta": "+0.2",
+            "bar_2020_length": "long",
+            "bar_2024_length": "long"
+        }
+    ]
+}

@@ -1,0 +1,281 @@
+/* You can add global styles to this file, and also import other style files */
+/* h1{
+    background-color: rgb(6, 6, 121);
+    font-size: 2em;
+    color: white;
+} */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Serif', serif;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  font-weight: 100;
+  font-size: 8px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 19px;
+}
+
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sentiment-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+p{
+  font-size: 10px;
+}
+
+.average-rating-heading {
+  border: 1px solid #eaeaea;
+  padding: 6px;
+  background-color: #eaeaea;
+  font-size: 10px;
+}
+
+.analysis2 {
+  color: deepskyblue;
+  font-weight: bold;
+}
+
+.sub-content1 {
+  border-right: 1px solid black;
+  padding: 10px;
+}
+
+.analysis1 {
+  color: black;
+  font-weight: bold;
+}
+
+.average-heading {
+  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.analysis3 {
+  color: black;
+  font-weight: bold;
+}
+
+.slider-wrapper {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.slider-content {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+
+.header {
+  margin-left: 1rem;
+  padding: 10px 0px 10px 0px;
+  font-size:24px;
+  color: white;
+  height: 100%;
+
+}
+
+.nav-button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #003f63;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+  height: max-content;
+}
+
+.nav-button:hover {
+  background-color: #003f63;
+  transform: scale(1.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-optical-sizing: auto !important;
+  font-style: normal !important;
+    font-family: 'PT Serif', serif;
+    border-collapse: separate;
+  border-spacing: 0 10px; /* 10px vertical spacing between rows */
+}
+
+/* .nav-button.left::before {
+  content: "← ";
+}
+
+.nav-button.right::after {
+  content: " →";
+} */
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+  background-color: #003f63;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .footer-content{
+  background-color: #003f63;
+  padding: 12px;
+  color: white;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+} */
+
+.heading-bold {
+  font-weight: bold;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003f63;
+  /* Your preferred footer color */
+  color: white;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.full-container {
+  height: 100vh !important;
+  margin-bottom: 40px;
+  padding: 20px;
+  margin-top: 4rem;
+}
+
+button{
+  font-size: 10px;
+}
+
+.footer {
+  margin-top: 250px;
+  font-size: 10px;
+}
+
+/* home.component.css */
+/* canvas {
+  max-width: 100%;
+} */
+
+
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sub-content1 {
+    border-right: none;
+    padding: 0px;
+  }
+
+  .footer {
+    margin-top: 10px !important;
+    font-size: 10px;
+  }
+
+  .average-rating-heading {
+    padding: 4px;
+  }
+
+
+
+  .full-container {
+    height: 0% !important;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sub-content1 {
+    border-right: none;
+    padding: 0px;
+  }
+
+  .average-rating-heading {
+    padding: 3px;
+  }
+
+  .footer {
+    margin-top: 10px !important;
+    font-size: 10px;
+  }
+
+ 
+
+  .full-container {
+    height: 0% !important;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

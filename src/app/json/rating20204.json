@@ -1,0 +1,13 @@
+ {
+    "name": "2020",
+    "series": [
+      {
+        "name": "Rating",
+        "value": 80
+      },
+      {
+        "name": "remaining Rating",
+        "value": 10
+      }
+    ]
+  }
