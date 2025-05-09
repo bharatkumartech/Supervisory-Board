@@ -253,6 +253,7 @@ export class HomeComponent implements OnInit {
       this.showPage4 = true;
       this.showPage1 = false;
       this.showPage3 = false;
+      this.showPage2 = false;
     }
     if (id === 'page-1') {
       this.showPage4 = false;
